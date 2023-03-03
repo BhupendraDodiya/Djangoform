@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="POST" action="/ur/">
+        <input type='hidden' name='hide' value='{{uid.id}}'/>
+        {% csrf_token %}
+        {{data.as_table}}
+        <input type="submit" value="DONE" />
+    </form>
+</body>
+
+</html>

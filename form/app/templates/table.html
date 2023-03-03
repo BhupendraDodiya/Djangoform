@@ -1,0 +1,24 @@
+<table border="1px solid black ">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.Name}}</td>
+            <td>{{i.Email}}</td>
+            <td>{{i.Password}}</td>
+            <td><a href='/update/{{i.id}}'>edit</a></td>
+            <td><a href='/delete/{{i.id}}'>delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
